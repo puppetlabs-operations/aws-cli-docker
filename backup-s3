@@ -5,6 +5,6 @@ dest=${2%/}
 
 date +%s > /tmp/last_backup
 
-aws s3 sync $1/ $2/
+aws s3 sync $source/ $dest/
 
-aws s3 cp /tmp/last_backup "${2}/last_backup"
+aws s3 cp /tmp/last_backup "${dest}/last_backup"
